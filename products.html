@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- NAV -->
+<nav class="bg-white shadow p-4 flex justify-between">
+  <h1 class="text-xl font-bold">GadgetStore</h1>
+  <a href="index.html">Home</a>
+</nav>
+
+<!-- STICKY FILTER BAR -->
+<section
+  class="sticky top-0 z-50 bg-white shadow-md">
+
+  <!-- FILTERS -->
+  <div class="p-4 grid md:grid-cols-4 gap-4 border-b">
+    <input id="search" type="text" placeholder="Search name"
+      class="border p-2 rounded">
+
+    <input id="minPrice" type="number" placeholder="Min price"
+      class="border p-2 rounded">
+
+    <select id="condition" class="border p-2 rounded" title="Select condition">
+      <option value="">All Conditions</option>
+      <option value="UK Used">UK Used</option>
+      <option value="Brand New">Brand New</option>
+    </select>
+  </div>
+
+  <!-- CATEGORY TABS -->
+  <div class="flex gap-4 justify-center p-3">
+    <button data-category=""
+      class="tab-btn text-white px-5 py-2 rounded bg-blue-500">
+      All
+    </button>
+
+    <button data-category="phone"
+      class="tab-btn bg-gray-200 px-5 py-2 rounded">
+      Phones
+    </button>
+
+    <button data-category="laptop"
+      class="tab-btn bg-gray-200 px-5 py-2 rounded">
+      Laptops
+    </button>
+  </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section id="productGrid" class="p-6 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></section>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/2348068578671" target="_blank" rel="noopener"
+ class="fixed bottom-5 right-5 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg">
+ WhatsApp
+</a>
+
+<script src="data/products.js"></script>
+<script src="js/render.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/whatsapp.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- NAV -->
+<nav class="bg-white shadow p-4 flex justify-between">
+  <h1 class="text-xl font-bold">GadgetStore</h1>
+  <a href="products.html">← Back</a>
+</nav>
+
+<!-- PRODUCT DETAILS -->
+<section class="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8 bg-white mt-6 rounded shadow">
+
+  <!-- IMAGES -->
+  <div>
+    <img id="mainImage" class="w-full h-96 object-cover rounded" alt="Main product image">
+    <div id="thumbnails" class="flex gap-2 mt-3"></div>
+  </div>
+
+  <!-- DETAILS -->
+  <div>
+    <h2 id="name" class="text-3xl font-bold"></h2>
+    <p id="price" class="text-green-600 text-xl font-semibold mt-2"></p>
+
+    <span id="condition"
+      class="inline-block mt-2 bg-gray-200 px-3 py-1 rounded">
+    </span>
+
+    <!-- SPECS -->
+    <h3 class="mt-6 font-semibold text-lg">Specifications</h3>
+    <ul id="specs" class="mt-2 space-y-1 text-gray-700"></ul>
+
+    <!-- WHATSAPP -->
+    <button id="orderBtn"
+      class="mt-6 w-full bg-green-500 text-white p-3 rounded text-lg">
+      Order on WhatsApp
+    </button>
+  </div>
+
+</section>
+
+<script src="data/products.js"></script>
+<script src="js/whatsapp.js"></script>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get("id"));
+  const product = products.find(p => p.id === id);
+
+  if (product) {
+    document.getElementById("name").innerText = product.name;
+    document.getElementById("price").innerText =
+      "₦" + product.price.toLocaleString();
+    document.getElementById("condition").innerText = product.condition;
+
+    // Images
+    const mainImage = document.getElementById("mainImage");
+    mainImage.src = product.images[0];
+
+    const thumbs = document.getElementById("thumbnails");
+    product.images.forEach(img => {
+      const t = document.createElement("img");
+      t.src = img;
+      t.className = "h-20 w-20 object-cover rounded cursor-pointer border";
+      t.onclick = () => mainImage.src = img;
+      thumbs.appendChild(t);
+    });
+
+    // Specs
+    const specsList = document.getElementById("specs");
+    Object.entries(product.specs).forEach(([key, value]) => {
+      const li = document.createElement("li");
+      li.innerText = `${key.toUpperCase()}: ${value}`;
+      specsList.appendChild(li);
+    });
+
+    // WhatsApp
+    document.getElementById("orderBtn").onclick = () =>
+      orderWhatsApp(product.name, product.condition, product.price);
+  }
+</script>
+
+</body>
+</html>
