@@ -14,6 +14,7 @@
   <a href="index.html">Home</a>
 </nav>
 
+
 <!-- STICKY FILTER BAR -->
 <section
   class="sticky top-0 z-50 bg-white shadow-md">
@@ -26,7 +27,10 @@
     <input id="minPrice" type="number" placeholder="Min price"
       class="border p-2 rounded">
 
-    <select id="condition" class="border p-2 rounded" title="Select condition">
+    <input id="maxPrice" type="number" placeholder="Max price"
+      class="border p-2 rounded">
+
+    <select id="condition" class="border p-2 rounded">
       <option value="">All Conditions</option>
       <option value="UK Used">UK Used</option>
       <option value="Brand New">Brand New</option>
@@ -36,7 +40,8 @@
   <!-- CATEGORY TABS -->
   <div class="flex gap-4 justify-center p-3">
     <button data-category=""
-      class="tab-btn text-white px-5 py-2 rounded bg-blue-500">
+      class="tab-btn text-white px-5 py-2 rounded"
+      style="background-color: var(--brand-primary)">
       All
     </button>
 
