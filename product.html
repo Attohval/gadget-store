@@ -9,8 +9,8 @@
 <body class="bg-gray-100">
 
 <!-- NAV -->
-<nav class="bg-white shadow p-4 flex justify-between">
-  <h1 class="text-xl font-bold">GadgetStore</h1>
+<nav class="sticky top-0 z-0 bg-white shadow p-4 flex justify-between">
+  <a href="index.html"><h1 class="text-xl font-bold">GadgetStore</h1></a>
   <a href="products.html">← Back</a>
 </nav>
 
@@ -44,6 +44,69 @@
   </div>
 
 </section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white mt-10">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">GadgetStore</h3>
+        <p class="text-gray-400 mb-4">
+          Your trusted source for UK Used and Brand New phones, laptops, and gadgets. Quality assured with nationwide delivery.
+        </p>
+        <p class="text-gray-400">📍 Lagos, Nigeria</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+          <li><a href="products.html" class="text-gray-400 hover:text-white">Products</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>📧 info@gadgetstore.com</li>
+          <li>📞 +234 806 857 8671</li>
+          <li>💬 WhatsApp: <a href="https://wa.me/2348068578671" class="hover:text-white">Chat Now</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter & Social -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Stay Updated</h4>
+        <!-- <p class="text-gray-400 mb-4">Subscribe for the latest deals and new arrivals.</p>
+        <div class="flex flex-col sm:flex-row mb-4">
+          <input type="email" placeholder="Your email" class="w-full sm:flex-1 p-2 rounded-l sm:rounded-r-none text-black mb-2 sm:mb-0">
+          <button class="w-full sm:w-auto bg-green-600 px-4 py-2 rounded-r sm:rounded-l-none hover:bg-green-700">Subscribe</button>
+        </div> -->
+        <div class="flex flex-wrap space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white">📘 Facebook</a>
+          <a href="#" class="text-gray-400 hover:text-white">🐦 Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-white">📷 Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-gray-700 my-8">
+
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400">© 2026 GadgetStore. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 
 <script src="data/products.js"></script>
 <script src="js/whatsapp.js"></script>

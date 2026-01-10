@@ -9,13 +9,21 @@
 <body class="bg-gray-100">
 
 <!-- NAV -->
-<nav class="bg-white shadow p-4 flex justify-between">
-  <h1 class="text-xl font-bold">GadgetStore</h1>
-  <a href="products.html" class="text-green-600 font-semibold">View Products</a>
+<nav class="sticky top-0 bg-white shadow p-4 flex justify-between items-center relative">
+  <a href="index.html"><h1 class="text-xl font-bold">GadgetStore</h1></a>
+  <div class="hidden md:flex space-x-4">
+    <a href="products.html" class="text-green-600 font-semibold">View Products</a>
+    <a href="contact.html" class="text-gray-700 hover:text-green-600">Contact</a>
+  </div>
+  <button id="menuToggle" class="md:hidden text-2xl">☰</button>
+  <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-white shadow-md z-50">
+    <a href="products.html" class="block p-4 border-b text-green-600 font-semibold">View Products</a>
+    <a href="contact.html" class="block p-4 text-gray-700 hover:text-green-600">Contact</a>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section class="text-center py-20 bg-gradient-to-r from-green-600 to-emerald-500 text-white">
+<section class="text-center py-20 bg-gray-900 text-white">
   <h2 class="text-4xl font-bold mb-4">Phones & Laptops</h2>
   <p class="mb-6">UK Used & Brand New Gadgets</p>
   <a href="products.html" class="bg-white text-green-600 px-6 py-3 rounded font-semibold">
@@ -76,10 +84,89 @@
   </div>
 </section>
 
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/2348068578671" target="_blank" rel="noopener"
+ class="fixed bottom-20 right-2 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg">
+ WhatsApp
+</a>
+
 <!-- FOOTER -->
-<footer class="text-center p-4 bg-white mt-10">
-  © 2026 GadgetStore
+<footer class="bg-gray-900 text-white mt-10">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">GadgetStore</h3>
+        <p class="text-gray-400 mb-4">
+          Your trusted source for UK Used and Brand New phones, laptops, and gadgets. Quality assured with nationwide delivery.
+        </p>
+        <p class="text-gray-400">📍 Lagos, Nigeria</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+          <li><a href="products.html" class="text-gray-400 hover:text-white">Products</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>📧 info@gadgetstore.com</li>
+          <li>📞 +234 806 857 8671</li>
+          <li>💬 WhatsApp: <a href="https://wa.me/2348068578671" class="hover:text-white">Chat Now</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter & Social -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Stay Updated</h4>
+        <!-- <p class="text-gray-400 mb-4">Subscribe for the latest deals and new arrivals.</p>
+        <div class="flex flex-col sm:flex-row mb-4">
+          <input type="email" placeholder="Your email" class="w-full sm:flex-1 p-2 rounded-l sm:rounded-r-none text-black mb-2 sm:mb-0">
+          <button class="w-full sm:w-auto bg-green-600 px-4 py-2 rounded-r sm:rounded-l-none hover:bg-green-700">Subscribe</button>
+        </div> -->
+        <div class="flex flex-wrap space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white">📘 Facebook</a>
+          <a href="#" class="text-gray-400 hover:text-white">🐦 Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-white">📷 Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-gray-700 my-8">
+
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400">© 2026 GadgetStore. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+</script>
 
 </body>
 </html>

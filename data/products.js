@@ -72,4 +72,130 @@ const products = [
       color: "Silver"
     }
   },
+  {
+    id: 2,
+    name: "MacBook Air M1",
+    category: "laptop",
+    condition: "Brand New",
+    price: 950000,
+    images: [
+      "assets/images/placeholder.jpg",
+      "assets/images/placeholder1.jpg",
+      "assets/images/placeholder2.jpg"
+    ],
+    specs: {
+      model: "M1 2020",
+      storage: "512GB SSD",
+      ram: "8GB",
+      processor: "Apple M1"
+    }
+  },
+  {
+    id: 2,
+    name: "MacBook Air M1",
+    category: "laptop",
+    condition: "Brand New",
+    price: 950000,
+    images: [
+      "assets/images/placeholder.jpg",
+      "assets/images/placeholder1.jpg",
+      "assets/images/placeholder2.jpg"
+    ],
+    specs: {
+      model: "M1 2020",
+      storage: "512GB SSD",
+      ram: "8GB",
+      processor: "Apple M1"
+    }
+  },
+  {
+    id: 2,
+    name: "MacBook Air M1",
+    category: "laptop",
+    condition: "Brand New",
+    price: 950000,
+    images: [
+      "assets/images/placeholder.jpg",
+      "assets/images/placeholder1.jpg",
+      "assets/images/placeholder2.jpg"
+    ],
+    specs: {
+      model: "M1 2020",
+      storage: "512GB SSD",
+      ram: "8GB",
+      processor: "Apple M1"
+    }
+  },
+  {
+    id: 2,
+    name: "MacBook Air M1",
+    category: "laptop",
+    condition: "Brand New",
+    price: 950000,
+    images: [
+      "assets/images/placeholder.jpg",
+      "assets/images/placeholder1.jpg",
+      "assets/images/placeholder2.jpg"
+    ],
+    specs: {
+      model: "M1 2020",
+      storage: "512GB SSD",
+      ram: "8GB",
+      processor: "Apple M1"
+    }
+  },
+  {
+    id: 2,
+    name: "MacBook Air M1",
+    category: "laptop",
+    condition: "Brand New",
+    price: 950000,
+    images: [
+      "assets/images/placeholder.jpg",
+      "assets/images/placeholder1.jpg",
+      "assets/images/placeholder2.jpg"
+    ],
+    specs: {
+      model: "M1 2020",
+      storage: "512GB SSD",
+      ram: "8GB",
+      processor: "Apple M1"
+    }
+  },
+  {
+    id: 2,
+    name: "MacBook Air M1",
+    category: "laptop",
+    condition: "Brand New",
+    price: 950000,
+    images: [
+      "assets/images/placeholder.jpg",
+      "assets/images/placeholder1.jpg",
+      "assets/images/placeholder2.jpg"
+    ],
+    specs: {
+      model: "M1 2020",
+      storage: "512GB SSD",
+      ram: "8GB",
+      processor: "Apple M1"
+    }
+  },
+  {
+    id: 2,
+    name: "MacBook Air M1",
+    category: "laptop",
+    condition: "Brand New",
+    price: 950000,
+    images: [
+      "assets/images/placeholder.jpg",
+      "assets/images/placeholder1.jpg",
+      "assets/images/placeholder2.jpg"
+    ],
+    specs: {
+      model: "M1 2020",
+      storage: "512GB SSD",
+      ram: "8GB",
+      processor: "Apple M1"
+    }
+  },
 ];

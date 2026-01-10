@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - GadgetStore</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<!-- NAV -->
+<nav class="sticky top-0 z-0 bg-gray-900 shadow p-4 flex justify-between items-center relative">
+  <a href="index.html"><h1 class="text-xl font-bold text-white">GadgetStore</h1></a>
+  <div class="hidden md:flex space-x-4">
+    <a class="text-white hover:text-gray-300" href="index.html">Home</a>
+    <a class="text-white hover:text-gray-300" href="products.html">Products</a>
+  </div>
+  <button id="menuToggle" class="md:hidden text-2xl text-white">☰</button>
+  <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-gray-900 shadow-md z-50">
+    <a href="index.html" class="block p-4 border-b text-white hover:text-gray-300">Home</a>
+    <a href="products.html" class="block p-4 text-white hover:text-gray-300">Products</a>
+  </div>
+</nav>
+
+<!-- CONTACT HERO -->
+<section class="text-center py-20 bg-gradient-to-r from-green-600 to-emerald-500 text-white">
+  <h2 class="text-4xl font-bold mb-4">Contact Us</h2>
+  <p class="mb-6">Get in touch for inquiries, support, or orders.</p>
+</section>
+
+<!-- CONTACT CONTENT -->
+<section class="max-w-6xl mx-auto p-6 grid md:grid-cols-2 gap-8">
+  <!-- CONTACT FORM -->
+  <div class="bg-white p-6 rounded shadow">
+    <h3 class="text-2xl font-bold mb-4">Send us a Message</h3>
+    <form id="contactForm">
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 mb-2">Name</label>
+        <input type="text" id="name" class="w-full p-2 border rounded" required>
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 mb-2">Email</label>
+        <input type="email" id="email" class="w-full p-2 border rounded" required>
+      </div>
+      <div class="mb-4">
+        <label for="message" class="block text-gray-700 mb-2">Message</label>
+        <textarea id="message" rows="5" class="w-full p-2 border rounded" required></textarea>
+      </div>
+      <button type="submit" class="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Send Message</button>
+    </form>
+  </div>
+
+  <!-- CONTACT INFO -->
+  <div class="bg-white p-6 rounded shadow">
+    <h3 class="text-2xl font-bold mb-4">Get in Touch</h3>
+    <div class="space-y-4">
+      <div>
+        <h4 class="font-semibold">📧 Email</h4>
+        <p class="text-gray-600">info@gadgetstore.com</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">📞 Phone</h4>
+        <p class="text-gray-600">+234 806 857 8671</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">💬 WhatsApp</h4>
+        <p class="text-gray-600">
+          <a href="https://wa.me/2348068578671" class="text-green-600 hover:underline">Chat with us</a>
+        </p>
+      </div>
+      <div>
+        <h4 class="font-semibold">📍 Location</h4>
+        <p class="text-gray-600">Lagos, Nigeria</p>
+      </div>
+      <div>
+        <h4 class="font-semibold">🕒 Business Hours</h4>
+        <p class="text-gray-600">Mon - Sat: 9AM - 6PM</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white mt-10">
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <div class="grid md:grid-cols-4 gap-8">
+      <!-- Company Info -->
+      <div>
+        <h3 class="text-xl font-bold mb-4">GadgetStore</h3>
+        <p class="text-gray-400 mb-4">
+          Your trusted source for UK Used and Brand New phones, laptops, and gadgets. Quality assured with nationwide delivery.
+        </p>
+        <p class="text-gray-400">📍 Lagos, Nigeria</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+          <li><a href="products.html" class="text-gray-400 hover:text-white">Products</a></li>
+          <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li>📧 info@gadgetstore.com</li>
+          <li>📞 +234 806 857 8671</li>
+          <li>💬 WhatsApp: <a href="https://wa.me/2348068578671" class="hover:text-white">Chat Now</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter & Social -->
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Stay Updated</h4>
+        <div class="flex flex-wrap space-x-4">
+          <a href="#" class="text-gray-400 hover:text-white">📘 Facebook</a>
+          <a href="#" class="text-gray-400 hover:text-white">🐦 Twitter</a>
+          <a href="#" class="text-gray-400 hover:text-white">📷 Instagram</a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-gray-700 my-8">
+
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-400">© 2026 GadgetStore. All rights reserved.</p>
+      <div class="flex space-x-4 mt-4 md:mt-0">
+        <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+        <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Thank you for your message! We will get back to you soon.');
+    this.reset();
+  });
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+      mobileMenu.classList.add('hidden');
+    }
+  });
+</script>
+
+</body>
+</html>
