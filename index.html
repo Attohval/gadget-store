@@ -5,11 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gadget Store</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hero-bg {
+      background-image: url('assets/images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+      z-index: 1;
+    }
+  </style>
 </head>
 <body class="bg-gray-100">
 
 <!-- NAV -->
-<nav class="sticky top-0 bg-white shadow p-4 flex justify-between items-center relative">
+<nav class="sticky top-0 z-50 bg-white shadow p-4 flex justify-between items-center relative">
   <a href="index.html"><h1 class="text-xl font-bold">GadgetStore</h1></a>
   <div class="hidden md:flex space-x-4">
     <a href="products.html" class="text-green-600 font-semibold">View Products</a>
@@ -23,10 +41,10 @@
 </nav>
 
 <!-- HERO -->
-<section class="text-center py-20 bg-gray-900 text-white">
-  <h2 class="text-4xl font-bold mb-4">Phones & Laptops</h2>
-  <p class="mb-6">UK Used & Brand New Gadgets</p>
-  <a href="products.html" class="bg-white text-green-600 px-6 py-3 rounded font-semibold">
+<section class="hero-bg text-center py-20 text-white relative">
+  <h2 class="text-4xl font-bold mb-4 relative z-10">Phones & Laptops</h2>
+  <p class="mb-6 relative z-10">UK Used & Brand New Gadgets</p>
+  <a href="products.html" class="bg-white text-green-600 px-6 py-3 rounded font-semibold relative z-10">
     Shop Now
   </a>
 </section>
